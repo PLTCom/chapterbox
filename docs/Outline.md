@@ -1,6 +1,8 @@
 # Project Outline
 ## Operating System
 * Ubuntu 18.04
+## Database
+* MySQL 
 ## Authentication
 * OpenLDAP
 * phpLDAPadmin
