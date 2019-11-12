@@ -10,6 +10,6 @@
   * enable HTTPS with certbot
 ## Chat instance
 * Rocketchat
-## voice/video coms
+## Voice/video coms
 * should be included in rocketchat
   * WebRTC and Jimli (spelling?) 
