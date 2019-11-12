@@ -14,4 +14,11 @@
 * Rocketchat
 ## Voice/video coms
 * should be included in rocketchat
-  * WebRTC and Jimli (spelling?) 
+  * WebRTC and Jimli (spelling?)
+## File Storage/doc editing 
+* Nextcloud
+* Onlyoffice 
+## CMS
+* Drupal
+  * for more advanced chapters that need a public website
+ 
