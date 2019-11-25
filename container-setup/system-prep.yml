@@ -1,0 +1,13 @@
+---
+- name: Setup Host Machine
+  hosts: all
+  vars:
+    - ansible_python_interpreter: "/usr/bin/python3"
+  tasks:
+      - name: Make sure the latest Podman is installed
+        package: 
+          name: podman
+          state: latest
+      - name: Setup Image Storage
+        
+      - name: Setup Persistent Volume Storage
