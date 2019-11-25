@@ -8,6 +8,6 @@
         package: 
           name: podman
           state: latest
-      - name: Setup Image Storage
+#      - name: Setup Image Storage
         
-      - name: Setup Persistent Volume Storage
+#      - name: Setup Persistent Volume Storage
