@@ -1,0 +1,45 @@
+---
+ # Ansible pushdaemon file
+ # This file will update the homeserver.yaml and turnserver.conf files,create a backup on the server, and restart the associated services.
+
+ # Note: handlers (like notify) only run AFTER all of the tasks complete in a particular play
+
+
+
+
+
+ # Play 1: listen for changes in repo config files. If changes, copy original fi
+- name: play to update config files and restart associated services
+  hosts: all
+  become: yes
+  tasks:
+    - name: copy turnserver
+      template:
+        src: "{{turnserver_repo}}"
+        dest: "{{turnserver_live}}"
+        backup: yes
+        owner: root
+        group: root
+        mode: 0644
+      notify: restart turnserver
+    - name: copy homeserver
+      template:
+        src: "{{homeserver_repo}}"
+        dest: "{{homeserver_live}}"
+        backup: yes
+        owner: matrix-synapse
+        group: root
+        mode:  0644
+      notify: restart homeserver
+  handlers:
+    - name: restart turnserver
+      systemd:
+        name: coturn
+        daemon_reload: yes
+        state: restarted
+    - name: restart homeserver
+      systemd:
+        name: matrix-synapse
+        daemon_reload: yes
+        state: restarted
+...
