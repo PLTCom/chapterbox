@@ -1,16 +1,16 @@
 ---
 # Location (Path) of the Matrix homeserver.yaml file from repo
-homeserver_repo: /users/daviddoub/documents/bigchonk-chapterbox/Configfiles/homeserver.yaml
+homeserver_repo:
 
 # Location (Path) of the Matrix homeserver.yaml file from live
-homeserver_live: /home/ddoub/test/homeserver.yaml
+homeserver_live:
 
 # Location (Path) of the Coturn turnserver.conf file from repo
 
-turnserver_repo: /users/daviddoub/documents/bigchonk-chapterbox/Configfiles/turnserver.conf
+turnserver_repo:
 
 # Location (Path) of the Coturn turnserver.conf file from live
-turnserver_live: /home/ddoub/test/turnserver.conf
+turnserver_live: 
 
 # Location (Path) of the Keycloak config file from repo
 
