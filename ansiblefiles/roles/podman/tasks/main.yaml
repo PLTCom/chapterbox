@@ -4,3 +4,31 @@
   package:
     name: podman
     state: latest
+# install nginx
+-name: install
+ podman_image:
+   name:
+# install php
+-name: install
+ podman_image:
+   name:
+# install postgres
+-name: install
+ podman_image:
+   name:
+# install keycloak
+-name: install
+ podman_image:
+   name:
+# install nextcloud
+-name: install
+ podman_image:
+   name:
+# install synapse
+-name: install
+ podman_image:
+   name:
+# install coturn
+-name: install
+ podman_image:
+   name: 
