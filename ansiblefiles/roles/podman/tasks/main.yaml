@@ -1,5 +1,6 @@
 ---
 
 - name: check podman install
-  package: podman
-  state: latest
+  package:
+    name: podman
+    state: latest
