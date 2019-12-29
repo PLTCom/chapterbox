@@ -1,0 +1,13 @@
+---
+base_domain_name: 
+
+# Web Server variables
+
+
+# Synapse variables
+synapse_server_name:
+synapse_ssl_cert:
+synapse_ssl_key:
+
+
+...
