@@ -1,6 +1,5 @@
 ---
-- name: podman setup
-  tasks:
-    - name: check podman install
-      package: podman
-      state: latest
+
+- name: check podman install
+  package: podman
+  state: latest

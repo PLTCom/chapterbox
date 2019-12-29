@@ -1,35 +1,6 @@
 ---
 # Chapterbox full install
 - hosts: dev
-  gather_facts: false
-  pre_tasks:
-  - name: ignore setup failure
-# This may need some tweaking. if setup DOESNT fail, i'd like to  ignore the rest of the pre tasks
-    setup:
-    ignore_errors: yes
-    register: setup_failure
-    debug:
-      var: setup_failure['failed']
-      register: failure_value
-  - name: Check for Python
-  #  register: python_check
-    raw: dnf install python3
-    register: python_check
-    when: failure_value.stdout == "true"
-  #    - "'FAILED' in setup_failure.stderr"
-  #    - python_check not in search ('already installed')
-  - name: print setup failure #python check output
-    debug:
-      var: setup_failure['failed'] #python_check
-#  - name: Install Python
-#    raw: dnf -y install {{python_version}}
-#    when: 'command not found' in python_check.stdout
-#  - name: gather facts
-#    setup:
-## Roles removed, tasks added  temporarily to test pre_tasks.
-  tasks:
-  - name:
-    debug:
-      msg: Python check successful # version is {{python_check}
-
+  roles:
+    - podman
 ...
