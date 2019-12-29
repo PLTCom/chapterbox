@@ -1,0 +1,22 @@
+---
+# Declare python version (also repo name in dnf)
+python_version: python36
+# Declare python interpreter
+ansible_python_interpreter: /usr/bin/python3
+# Location (Path) of the Matrix homeserver.yaml file from repo
+homeserver_repo: /users/daviddoub/documents/bigchonk-chapterbox/Configfiles/homeserver.yaml
+
+# Location (Path) of the Matrix homeserver.yaml file from live
+homeserver_live: /etc/matrix-synapse/homeserver.yaml
+
+# Location (Path) of the Coturn turnserver.conf file from repo
+
+turnserver_repo: /users/daviddoub/documents/bigchonk-chapterbox/Configfiles/turnserver.conf
+
+# Location (Path) of the Coturn turnserver.conf file from live
+turnserver_live: /etc/turnserver.conf
+
+# Location (Path) of the Keycloak config file from repo
+
+# Location (Path) of the Keycloak config file from live
+...
