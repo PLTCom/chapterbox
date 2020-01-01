@@ -4,31 +4,23 @@
   package:
     name: podman
     state: latest
-# install nginx
--name: install
+-name: install nginx
  podman_image:
-   name:
-# install php
--name: install
+   name: nginx
+-name: install postgres
  podman_image:
-   name:
-# install postgres
--name: install
+   name: postgres
+-name: install keycloak
  podman_image:
-   name:
-# install keycloak
--name: install
+   name: jboss/keycloak
+-name: install nextcloud
  podman_image:
-   name:
-# install nextcloud
--name: install
+   name: nextcloud
+-name: install synapse
  podman_image:
-   name:
-# install synapse
--name: install
+   name: matrixdotorg/synapse
+-name: install coturn
  podman_image:
-   name:
-# install coturn
--name: install
- podman_image:
-   name: 
+   name: instrumentisto/coturn
+# create nextcloud storage volume
+# create database volume
