@@ -17,33 +17,13 @@
     - matrixdotorg/synapse
     - instrumentisto/coturn
 
-#- name: install postgres
-#  podman_image:
-#   name: postgres
 
-#- name: install keycloak
-#  podman_image:
-#   name: jboss/keycloak
-#
-#- name: install nextcloud
-#  podman_image:
-#   name: nextcloud
 
-#- name: install synapse
-#  podman_image:
-#   name: matrixdotorg/synapse
-
-#- name: install coturn
-#  podman_image:
-#   name: instrumentisto/coturn
-
-# Create disk volumes
-#- name: create nextcloud userdata volume
-#  command: podman volume create nc-userdata-vol
-
-#- name: create postgres data volume
-#  command: podman volume create database-vol
-
-#- name: create appdata volume
-#  command: podman volume create appdata-vol
+# Create disk volumes (volume names can be cound in group_vars)
+- name: podman volumes
+  command: podman volume create "{{item}}"
+  loop:
+    - "{{vol1}}"
+    - "{{vol2}}"
+    - "{{vol3}}"
 ...
