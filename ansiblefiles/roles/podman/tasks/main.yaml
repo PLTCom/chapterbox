@@ -1,27 +1,48 @@
 ---
-
+# This file lists all tasks for installing podman, pulling the component images from Docker Hub, and creating data volumes
+# Install podman and pull images
 - name: check podman install
   package:
     name: podman
     state: latest
-- name: install nginx
+
+- name: install component images
   podman_image:
-   name: nginx
-- name: install postgres
-  podman_image:
-   name: postgres
-- name: install keycloak
-  podman_image:
-   name: jboss/keycloak
-- name: install nextcloud
-  podman_image:
-   name: nextcloud
-- name: install synapse
-  podman_image:
-   name: matrixdotorg/synapse
-- name: install coturn
-  podman_image:
-   name: instrumentisto/coturn
-# create nextcloud storage volume
-# create database volume
+   name:
+     - nginx
+     - postgres
+     - jboss/keycloak
+     - nextcloud
+     - matrixdotorg/synapse
+     - instrumentisto/coturn
+
+#- name: install postgres
+#  podman_image:
+#   name: postgres
+
+#- name: install keycloak
+#  podman_image:
+#   name: jboss/keycloak
+#
+#- name: install nextcloud
+#  podman_image:
+#   name: nextcloud
+
+#- name: install synapse
+#  podman_image:
+#   name: matrixdotorg/synapse
+
+#- name: install coturn
+#  podman_image:
+#   name: instrumentisto/coturn
+
+# Create disk volumes
+#- name: create nextcloud userdata volume
+#  command: podman volume create nc-userdata-vol
+
+#- name: create postgres data volume
+#  command: podman volume create database-vol
+
+#- name: create appdata volume
+#  command: podman volume create appdata-vol
 ...
