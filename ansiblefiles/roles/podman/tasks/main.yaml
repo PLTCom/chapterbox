@@ -8,13 +8,14 @@
 
 - name: install component images
   podman_image:
-   name:
-     - nginx
-     - postgres
-     - jboss/keycloak
-     - nextcloud
-     - matrixdotorg/synapse
-     - instrumentisto/coturn
+    name: "{{item}}"
+  loop:
+    - nginx
+    - postgres
+    - jboss/keycloak
+    - nextcloud
+    - matrixdotorg/synapse
+    - instrumentisto/coturn
 
 #- name: install postgres
 #  podman_image:
