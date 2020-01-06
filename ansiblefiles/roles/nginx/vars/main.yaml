@@ -1,0 +1,7 @@
+---
+# This is the file containing variable parameters for nginx configuration. Edit this file to change parameters for nginx.
+
+# port for nginx to listen on
+port: 
+# name of your server
+servername:

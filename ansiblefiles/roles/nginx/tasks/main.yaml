@@ -1,0 +1,11 @@
+# This file contains the tasks to configure nginx
+
+- name: copy nginx config file from repo to container volume
+  template:
+    src: /chapterbox/Configfiles/site.j2
+    dest: /var/lib/containers/storage/{{vol1}}/_data/etc/nginx/conf.d/site.conf
+    mode:
+    owner:
+
+- name: start container and mount filesystem
+  command: podman run -d  --name nginx --mount type=bind,src=/var/lib/containers/storage/appdata/_data,target=/etc/nginx/conf.d nginx
